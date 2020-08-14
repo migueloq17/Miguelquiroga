@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/StyleCss.css"/>
+    <title>Formulario</title>
+</head>
+    <body>
+        <main class="container">
+        <form action="login.html" class="formulario" method="post" onsubmit="return validar()">
+          <h1 class="formulario_titulo">Formulario</h1>
+          <input id="nombre" type="text" placeholder="Nombre" class="formulario_input" maxlength="30" onkeyup=" return mayus(this);" onkeypress="return solo_letras(event)" onpaste="return false" required>
+          <input id="correo" type="email" placeholder="Correo" maxlength="50" class="formulario_input" onpaste="return false" required>
+          <input id="fecha" type="text" placeholder="Fecha" class="formulario_input" onchange="return validar_fecha_mayor()" required>
+          <input id="telefono" type="text" placeholder="Telefono" maxlength="10" class="formulario_input" onkeypress=" return valida_ntel(event);" onpaste="return false" required>
+          <input id="contrasena" type="password" placeholder="Contraseña" maxlength="15" class="formulario_input" onpaste="return false" required>
+          <button id="botonVal" class="formulario_submit" onclick=" return getData()">Enviar</button>
+        </form>
+        </main>
+        <script src="js/form.js"></script>
+    </body>
+</html>  
